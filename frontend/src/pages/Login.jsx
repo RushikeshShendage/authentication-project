@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
-
+import { Link } from "react-router-dom";
 function Login() {
 
   const [username, setUsername] = useState("");
@@ -77,7 +77,9 @@ function Login() {
 
         <p className="text-center mt-3">
           Don't have an account?
-          <a href="/register"> Register</a>
+           <Link to="/register" className="text-decoration-none">
+              Register
+            </Link>
         </p>
       </div>
     </div>
